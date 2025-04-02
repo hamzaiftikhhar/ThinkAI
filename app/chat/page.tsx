@@ -2,11 +2,11 @@
 
 import { useState } from "react"
 import { useChat } from "ai/react"
-import { ChatInput } from "@/components/chat/chat-input"
-import { MessageList } from "@/components/chat/message-list"
-import { Button } from "@/components/ui/button"
+import { ChatInput } from "../../components/chat/chat-input"
+import { MessageList } from "../../components/chat/message-list"
+import { Button } from "../../components/ui/button"
 import { Sparkles, Menu } from "lucide-react"
-import Sidebar from "@/components/layout/sidebar"
+import Sidebar from "../../components/layout/sidebar"
 
 export default function ChatPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
