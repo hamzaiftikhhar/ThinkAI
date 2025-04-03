@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "../../components/ui/avatar"
-import { Button } from "../../components/ui/button"
+import React from "react"; // ✅ Add this line
+import { Avatar, AvatarFallback, AvatarImage } from "../../components/ui/avatar";
+import { Button } from "../ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,27 +11,28 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../../components/ui/dropdown-menu"
-import { getInitials } from "../../lib/utils"
-import { LogOut, Settings, User } from "lucide-react"
+} from "../../components/ui/dropdown-menu";
+import { getInitials } from "../../lib/utils";
+import { LogOut, Settings, User } from "lucide-react";
 
 interface UserDropdownProps {
   user?: {
-    name: string
-    email: string
-    image?: string
-  }
+    name: string;
+    email: string;
+    image?: string;
+  };
 }
 
 export function UserDropdown({ user }: UserDropdownProps) {
-  // Default user if not provided
   const defaultUser = {
     name: "Guest User",
     email: "guest@example.com",
-  }
+    image: undefined,
 
-  const currentUser = user || defaultUser
-  const initials = getInitials(currentUser.name)
+  };
+
+  const currentUser = user || defaultUser;
+  const initials = getInitials(currentUser.name);
 
   return (
     <DropdownMenu>
@@ -70,6 +72,5 @@ export function UserDropdown({ user }: UserDropdownProps) {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
-
