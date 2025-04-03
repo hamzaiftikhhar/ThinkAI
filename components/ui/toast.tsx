@@ -46,14 +46,7 @@ const Toast = React.forwardRef<
 >(({ className, variant, ...props }, ref) => {
   return <ToastPrimitives.Root ref={ref} className={cn(toastVariants({ variant }), className)} {...props} />
 })
-\
-Toast.displayName = Toastvariant}), className)}
-{
-  ...props
-}
-;/>
-)
-})
+
 Toast.displayName = ToastPrimitives.Root.displayName
 
 const ToastAction = React.forwardRef<
