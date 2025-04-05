@@ -3,9 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   // Add this to resolve the favicon conflict
   webpack: (config) => {
-    return config
+    return config;
   },
 }
 
 module.exports = nextConfig
-
